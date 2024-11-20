@@ -1,0 +1,46 @@
+C51 COMPILER V9.54   MATH                                                                  11/20/2024 22:49:49 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE MATH
+OBJECT MODULE PLACED IN .\Objects\math.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE math.c OPTIMIZE(9,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\math
+                    -.lst) OBJECT(.\Objects\math.obj)
+
+line level    source
+
+   1          
+   2          
+   3          char max(char x, char y) {
+   4   1          return x > y ? x : y;
+   5   1      }
+   6          
+   7          char min(char x, char y) {
+   8   1          return x > y ? y : x;
+   9   1      }
+  10          
+  11          
+  12          // 将targetNum修改changeNum，并将修改之后的值映射到区间[minNum, maxNum]
+  13          void targetNumChange(char* targetNum, char changeNum, char minNum, char maxNum) {
+  14   1          *targetNum = *targetNum + changeNum;
+  15   1      
+  16   1          if (*targetNum > maxNum) {
+  17   2              *targetNum = minNum + (*targetNum - maxNum - 1);
+  18   2          }
+  19   1          if (*targetNum < minNum) {
+  20   2              *targetNum = maxNum - (minNum - *targetNum - 1);
+  21   2          }
+  22   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     80    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       6
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
