@@ -99,7 +99,7 @@ void TimeSet(void) {
             targetNumChange(&DS1302_Time[2], 0, 1, 29);
         }
     }
-    targetNumChange(&DS1302_Time[3], 0, 0, 29);
+    targetNumChange(&DS1302_Time[3], 0, 0, 23);
     targetNumChange(&DS1302_Time[4], 0, 0, 59);
     targetNumChange(&DS1302_Time[5], 0, 0, 59);
     
@@ -147,7 +147,7 @@ void clockSet(char cnt) {
         targetNumChange(&clockSetSelect, 1, 0, 1);
     }    
     
-    targetNumChange(&clock[cnt][0], 0, 0, 29);
+    targetNumChange(&clock[cnt][0], 0, 0, 23);
     targetNumChange(&clock[cnt][1], 0, 0, 59);
    
 	// 更新显示
